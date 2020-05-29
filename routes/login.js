@@ -1,8 +1,8 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const AccountController = require('../controllers/AccountController');
 
-router.get('/', function(req, res, next) {
-  res.render('login.pug', { title: 'Đăng nhập' });
-});
+router.route('/')
+  .get(AccountController.renderTemplateLogin)
 
 module.exports = router;

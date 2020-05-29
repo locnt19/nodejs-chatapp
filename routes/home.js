@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const ChatController = require('../controllers/ChatController');
+const HomeController = require('../controllers/HomeController');
 
 router.route('/')
-  .get(ChatController.renderTemplate)
+  .get(HomeController.renderTemplate)
 
 module.exports = router;

@@ -1,9 +1,15 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index.pug', { title: 'NodeJS - Chat app real-time' });
-});
+const HomeRoutes = require('./home');
+const RegisterRoutes = require('./register');
+const LoginRoutes = require('./login');
+const ChatRoutes = require('./chat');
+
+
+router.use('/', HomeRoutes);
+router.use('/register', RegisterRoutes)
+router.use('/login', LoginRoutes)
+router.use('/chat', ChatRoutes)
 
 module.exports = router;
