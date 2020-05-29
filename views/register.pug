@@ -5,17 +5,19 @@ block content
 		.row
 			.col-6.mx-auto.mt-5
 				h1.text-center.text-uppercase Register
-				form(novalidate).needs-validation.mt-3
+				form(method="POST" novalidate).needs-validation.mt-3
 					.form-group
 						label(for="username") Username
-						input#username.form-control(type="text" required)
+						input#username.form-control(type="text" name="username" required)
 						.invalid-feedback Please provide a valid username.
 					.form-group
 						label(for="password") Password
-						input#password.form-control(type="password" required)
-						.invalid-feedback Please provide a valid password.
-					.form-group
-						label(for="repassword") Re-password
-						input#repassword.form-control(type="password" required)
+						input#password.form-control(type="password" name="password" required)
 						.invalid-feedback Please provide a valid password.
 					button.btn.btn-primary.btn-block(type="submit") Register
+				ul
+					-for(var item in data)
+						li
+							strong id: #{data[item]._id}
+							strong username: #{data[item].username}
+							strong password: #{data[item].password}
