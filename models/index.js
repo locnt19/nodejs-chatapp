@@ -1,8 +1,6 @@
 const mongoose = require('mongoose');
 const URI = require('../configs/database');
 
-console.log(URI);
-
 mongoose.connect(process.env.MONGODB_URI || URI, {
 	useNewUrlParser: true,
 	useFindAndModify: false,
