@@ -1,5 +1,12 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  h1.mb-0 Welcome
+  h3 to #{title}
+  ul
+    li
+      a(href="/register") Register screen
+    li
+      a(href="/login") Login screen
+    li
+      a(href="/chat") Chat screen

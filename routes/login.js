@@ -1,9 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index.pug', { title: 'NodeJS - Chat app real-time' });
+  res.render('login.pug', { title: 'Đăng nhập' });
 });
 
 module.exports = router;
